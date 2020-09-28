@@ -2,27 +2,17 @@
 
 def isSafe(arr):
 	print("Started Safe phase")
-	# flag = 0
 	for i in range(N):
 		for j in range(N):
 			ans = arr[i][j]
 			if ans > 10:
 				print("Invalid number")
-				return False         #main file code
-				# flag = 1
-				# break     
+				return False         #main file code     
 			else:
 				for ii in range(N):
 					if ( j != ii and ans == arr[i][ii] ) or ( i != ii and ans == arr[ii][j]):
 						return False           #main file code
-						# flag = 1
-						# break
 	return True         #main file code
-	# if flag == 1:
-	# 	print("FAILED")
-	# else:
-	# 	print("GRAND SUCCESS")
-
 
 
 def printGrid(grid):
